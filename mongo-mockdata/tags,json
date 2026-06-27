@@ -1,0 +1,38 @@
+[
+  {
+    "_id": {"$oid": "6a3fc87c8e240e88906e44a9"},
+    "name": "pasta"
+  },
+  {
+    "_id": {"$oid": "6a3fc8936793bafe944055b8"},
+    "name": "quick"
+  },
+  {
+    "_id": {"$oid": "6a3fc8a65914cc748eb80540"},
+    "name": "easy"
+  },
+  {
+    "_id": {"$oid": "6a3fc8ba769939bd1c3d097a"},
+    "name": "curry"
+  },
+  {
+    "_id": {"$oid": "6a3fc8cd441a2caa0c8f279a"},
+    "name": "spicy"
+  },
+  {
+    "_id": {"$oid": "6a3fc8df12b9d49617491f9d"},
+    "name": "popular"
+  },
+  {
+    "_id": {"$oid": "6a3fc8f23e7a13e77b2b8d26"},
+    "name": "appetizer"
+  },
+  {
+    "_id": {"$oid": "6a3fc906233b031a2905322a"},
+    "name": "dip"
+  },
+  {
+    "_id": {"$oid": "6a3fc916ee6a9486000f4fa8"},
+    "name": "vegetarian"
+  }
+]
