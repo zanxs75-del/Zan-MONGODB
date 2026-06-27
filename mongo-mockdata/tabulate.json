@@ -1,98 +1,132 @@
 [
   {
     "name": "Sunset Fishing Trip",
-    "description": "A relaxing fishing trip along the coast during sunset. Suitable for beginners and families.",
+    "location": { "name": "Jurong", "_id": { "$oid": "507f1f77bcf86cd799439011" } },
     "conditions": [
+      { "name": "Clear skies" },
       { "name": "Calm seas" },
-      { "name": "Clear skies" }
+      { "name": "No strong winds" },
+      { "name": "Good visibility" }
     ],
     "tags": [
       { "name": "popular", "_id": { "$oid": "6a3fc87c8e240e88906e44a9" } },
       { "name": "quick", "_id": { "$oid": "6a3fc8936793bafe944055b8" } },
       { "name": "easy", "_id": { "$oid": "6a3fc8a65914cc748eb80540" } }
     ],
-    "location": { "name": "Jurong", "_id": { "$oid": "507f1f77bcf86cd799439011" } },
+    "description": [
+      "A relaxing fishing trip along the coast during sunset.",
+      "Suitable for beginners and families.",
+      "All fishing equipment is provided."
+    ],
     "instructions": [
       "Arrive at the dock 30 minutes early.",
       "Bring your own fishing rod or rent one on site.",
-      "Follow the captain's safety briefing."
+      "Follow the captain's safety briefing.",
+      "Wear non-slip shoes."
     ]
   },
   {
     "name": "Weekend Beach Picnic",
-    "description": "Enjoy a relaxing picnic at the popular West Coast beach area. Bring your own food and enjoy the view.",
+    "location": { "name": "West Coast", "_id": { "$oid": "507f1f77bcf86cd799439012" } },
     "conditions": [
-      { "name": "Low tide" },
-      { "name": "No rain" }
+      { "name": "Clear skies" },
+      { "name": "Sunny weather" },
+      { "name": "No rain" },
+      { "name": "Low tide" }
     ],
     "tags": [
       { "name": "pack", "_id": { "$oid": "6a3fc8ba769939bd1c3d097a" } },
       { "name": "crowded", "_id": { "$oid": "6a3fc8cd441a2caa0c8f279a" } },
       { "name": "toilets", "_id": { "$oid": "6a3fc906233b031a2905322a" } }
     ],
-    "location": { "name": "West Coast", "_id": { "$oid": "507f1f77bcf86cd799439012" } },
+    "description": [
+      "Enjoy a relaxing picnic at the popular West Coast beach area.",
+      "Bring your own food and enjoy the scenic view.",
+      "Ideal for groups and families."
+    ],
     "instructions": [
       "Reserve a picnic table in advance.",
       "Bring sunscreen and insect repellent.",
-      "Dispose of trash in designated bins."
+      "Dispose of trash in designated bins.",
+      "Stay hydrated throughout the day."
     ]
   },
   {
     "name": "Changi Kayak Adventure",
-    "description": "Explore the mangroves and coastline of Changi by kayak. Guided tour with all equipment provided.",
+    "location": { "name": "Changi", "_id": { "$oid": "507f1f77bcf86cd799439013" } },
     "conditions": [
-      { "name": "Moderate fitness level" },
-      { "name": "Good weather" }
+      { "name": "Clear skies" },
+      { "name": "Calm water conditions" },
+      { "name": "Good weather" },
+      { "name": "Moderate fitness level" }
     ],
     "tags": [
       { "name": "spacious", "_id": { "$oid": "6a3fc8df12b9d49617491f9d" } },
       { "name": "free", "_id": { "$oid": "6a3fc8f23e7a13e77b2b8d26" } },
       { "name": "bait", "_id": { "$oid": "6a3fc916ee6a9486000f4fa8" } }
     ],
-    "location": { "name": "Changi", "_id": { "$oid": "507f1f77bcf86cd799439013" } },
+    "description": [
+      "Explore the mangroves and coastline of Changi by kayak.",
+      "Guided tour with all equipment provided.",
+      "Experience the rich biodiversity of the area."
+    ],
     "instructions": [
       "Wear comfortable clothes that can get wet.",
       "Bring a change of clothes and a towel.",
-      "Listen to the guide's instructions before launching."
+      "Listen to the guide's instructions before launching.",
+      "Apply waterproof sunscreen before departure."
     ]
   },
   {
-    "name": "Jurong Lake Walk",
-    "description": "A peaceful evening walk around Jurong Lake. Perfect for nature lovers and photographers.",
+    "name": "Morning Beach Yoga",
+    "location": { "name": "West Coast", "_id": { "$oid": "507f1f77bcf86cd799439012" } },
     "conditions": [
-      { "name": "Sunset time" },
-      { "name": "Light breeze" }
+      { "name": "Clear skies" },
+      { "name": "Sunny weather" },
+      { "name": "Calm seas" },
+      { "name": "No strong winds" }
     ],
     "tags": [
       { "name": "popular", "_id": { "$oid": "6a3fc87c8e240e88906e44a9" } },
-      { "name": "spacious", "_id": { "$oid": "6a3fc8df12b9d49617491f9d" } },
-      { "name": "free", "_id": { "$oid": "6a3fc8f23e7a13e77b2b8d26" } }
+      { "name": "free", "_id": { "$oid": "6a3fc8f23e7a13e77b2b8d26" } },
+      { "name": "spacious", "_id": { "$oid": "6a3fc8df12b9d49617491f9d" } }
     ],
-    "location": { "name": "Jurong", "_id": { "$oid": "507f1f77bcf86cd799439011" } },
+    "description": [
+      "Start your day with a rejuvenating yoga session on the beach.",
+      "Suitable for all skill levels.",
+      "Mats and refreshments provided."
+    ],
     "instructions": [
-      "Bring a camera for stunning sunset shots.",
-      "Wear comfortable walking shoes.",
-      "Stay on designated paths."
+      "Arrive 15 minutes early to set up your mat.",
+      "Wear comfortable workout attire.",
+      "Bring a water bottle and towel.",
+      "Inform the instructor of any injuries."
     ]
   },
   {
-    "name": "West Coast Seafood Feast",
-    "description": "A culinary adventure at West Coast's famous seafood restaurants. Sample fresh catches of the day.",
+    "name": "Coastal Photography Tour",
+    "location": { "name": "Changi", "_id": { "$oid": "507f1f77bcf86cd799439013" } },
     "conditions": [
-      { "name": "Empty stomach" },
-      { "name": "Group of 4+" }
+      { "name": "Clear skies" },
+      { "name": "Good visibility" },
+      { "name": "Good weather" },
+      { "name": "Calm water conditions" }
     ],
     "tags": [
+      { "name": "popular", "_id": { "$oid": "6a3fc87c8e240e88906e44a9" } },
       { "name": "quick", "_id": { "$oid": "6a3fc8936793bafe944055b8" } },
-      { "name": "pack", "_id": { "$oid": "6a3fc8ba769939bd1c3d097a" } },
-      { "name": "crowded", "_id": { "$oid": "6a3fc8cd441a2caa0c8f279a" } }
+      { "name": "easy", "_id": { "$oid": "6a3fc8a65914cc748eb80540" } }
     ],
-    "location": { "name": "West Coast", "_id": { "$oid": "507f1f77bcf86cd799439012" } },
+    "description": [
+      "Capture stunning coastal landscapes and wildlife.",
+      "Professional photography tips provided.",
+      "Suitable for amateur and experienced photographers."
+    ],
     "instructions": [
-      "Make a reservation at least 2 days in advance.",
-      "Ask for the chef's daily specials.",
-      "Bring cash as some stalls may not accept cards."
+      "Bring your camera and extra batteries.",
+      "Wear comfortable walking shoes.",
+      "Meet at the Changi Point Ferry Terminal.",
+      "Carry a tripod for sunrise shots."
     ]
   }
 ]
-
