@@ -1,189 +1,98 @@
 [
   {
-    "name": "Spaghetti Carbonara",
-    "cuisine": {
-      "_id": {"$oid": "507f1f77bcf86cd799439011"},
-      "name": "Italian"
-    },
-    "prepTime": 15,
-    "cookTime": 15,
-    "servings": 4,
-    "ingredients": [
-      {
-        "name": "spaghetti",
-        "amount": 400,
-        "unit": "g"
-      },
-      {
-        "name": "pancetta",
-        "amount": 150,
-        "unit": "g"
-      },
-      {
-        "name": "eggs",
-        "amount": 4,
-        "unit": "whole"
-      },
-      {
-        "name": "Pecorino Romano cheese",
-        "amount": 50,
-        "unit": "g"
-      },
-      {
-        "name": "black pepper",
-        "amount": 2,
-        "unit": "tsp"
-      }
-    ],
-    "instructions": [
-      "Cook spaghetti in salted boiling water until al dente.",
-      "Fry pancetta until crispy.",
-      "Beat eggs with grated cheese and pepper.",
-      "Toss hot pasta with pancetta, then mix in egg mixture.",
-      "Serve immediately with extra cheese and pepper."
+    "name": "Sunset Fishing Trip",
+    "description": "A relaxing fishing trip along the coast during sunset. Suitable for beginners and families.",
+    "conditions": [
+      { "name": "Calm seas" },
+      { "name": "Clear skies" }
     ],
     "tags": [
-      {
-        "_id": {"$oid": "6a3fc87c8e240e88906e44a9"},
-        "name": "pasta"
-      },
-      {
-        "_id": {"$oid": "6a3fc8936793bafe944055b8"},
-        "name": "quick"
-      },
-      {
-        "_id": {"$oid": "6a3fc8a65914cc748eb80540"},
-        "name": "easy"
-      }
+      { "name": "popular", "_id": { "$oid": "6a3fc87c8e240e88906e44a9" } },
+      { "name": "quick", "_id": { "$oid": "6a3fc8936793bafe944055b8" } },
+      { "name": "easy", "_id": { "$oid": "6a3fc8a65914cc748eb80540" } }
+    ],
+    "location": { "name": "Jurong", "_id": { "$oid": "507f1f77bcf86cd799439011" } },
+    "instructions": [
+      "Arrive at the dock 30 minutes early.",
+      "Bring your own fishing rod or rent one on site.",
+      "Follow the captain's safety briefing."
     ]
   },
   {
-    "name": "Chicken Tikka Masala",
-    "cuisine": {
-      "_id": {"$oid": "507f1f77bcf86cd799439012"},
-      "name": "Indian"
-    },
-    "prepTime": 30,
-    "cookTime": 40,
-    "servings": 6,
-    "ingredients": [
-      {
-        "name": "chicken breast",
-        "amount": 800,
-        "unit": "g"
-      },
-      {
-        "name": "yogurt",
-        "amount": 200,
-        "unit": "ml"
-      },
-      {
-        "name": "lemon juice",
-        "amount": 2,
-        "unit": "tbsp"
-      },
-      {
-        "name": "garam masala",
-        "amount": 2,
-        "unit": "tsp"
-      },
-      {
-        "name": "tomato puree",
-        "amount": 400,
-        "unit": "g"
-      },
-      {
-        "name": "heavy cream",
-        "amount": 200,
-        "unit": "ml"
-      }
-    ],
-    "instructions": [
-      "Marinate chicken in yogurt, lemon juice, and spices for 2 hours.",
-      "Grill or broil chicken until charred.",
-      "Simmer tomato puree with spices.",
-      "Add grilled chicken and cream to the sauce.",
-      "Simmer until chicken is cooked through and sauce thickens."
+    "name": "Weekend Beach Picnic",
+    "description": "Enjoy a relaxing picnic at the popular West Coast beach area. Bring your own food and enjoy the view.",
+    "conditions": [
+      { "name": "Low tide" },
+      { "name": "No rain" }
     ],
     "tags": [
-      {
-        "_id": {"$oid": "6a3fc8ba769939bd1c3d097a"},
-        "name": "curry"
-      },
-      {
-        "_id": {"$oid": "6a3fc8cd441a2caa0c8f279a"},
-        "name": "spicy"
-      },
-      {
-        "_id": {"$oid": "6a3fc8df12b9d49617491f9d"},
-        "name": "popular"
-      }
+      { "name": "pack", "_id": { "$oid": "6a3fc8ba769939bd1c3d097a" } },
+      { "name": "crowded", "_id": { "$oid": "6a3fc8cd441a2caa0c8f279a" } },
+      { "name": "toilets", "_id": { "$oid": "6a3fc906233b031a2905322a" } }
+    ],
+    "location": { "name": "West Coast", "_id": { "$oid": "507f1f77bcf86cd799439012" } },
+    "instructions": [
+      "Reserve a picnic table in advance.",
+      "Bring sunscreen and insect repellent.",
+      "Dispose of trash in designated bins."
     ]
   },
   {
-    "name": "Guacamole",
-    "cuisine": {
-      "_id": {"$oid": "507f1f77bcf86cd799439013"},
-      "name": "Mexican"
-    },
-    "prepTime": 15,
-    "cookTime": 0,
-    "servings": 4,
-    "ingredients": [
-      {
-        "name": "avocados",
-        "amount": 3,
-        "unit": "whole"
-      },
-      {
-        "name": "lime juice",
-        "amount": 1,
-        "unit": "tbsp"
-      },
-      {
-        "name": "red onion",
-        "amount": 0.25,
-        "unit": "whole"
-      },
-      {
-        "name": "tomato",
-        "amount": 1,
-        "unit": "whole"
-      },
-      {
-        "name": "cilantro",
-        "amount": 2,
-        "unit": "tbsp"
-      },
-      {
-        "name": "salt",
-        "amount": 0.5,
-        "unit": "tsp"
-      }
-    ],
-    "instructions": [
-      "Mash avocados in a bowl.",
-      "Finely chop onion, tomato, and cilantro.",
-      "Mix all ingredients together.",
-      "Season with salt and lime juice to taste.",
-      "Serve immediately with tortilla chips."
+    "name": "Changi Kayak Adventure",
+    "description": "Explore the mangroves and coastline of Changi by kayak. Guided tour with all equipment provided.",
+    "conditions": [
+      { "name": "Moderate fitness level" },
+      { "name": "Good weather" }
     ],
     "tags": [
-      {
-        "_id": {"$oid": "6a3fc8f23e7a13e77b2b8d26"},
-        "name": "appetizer"
-      },
-      {
-        "_id": {"$oid": "6a3fc906233b031a2905322a"},
-        "name": "dip"
-      },
-      {
-        "_id": {"$oid": "6a3fc916ee6a9486000f4fa8"},
-        "name": "vegetarian"
-      }
+      { "name": "spacious", "_id": { "$oid": "6a3fc8df12b9d49617491f9d" } },
+      { "name": "free", "_id": { "$oid": "6a3fc8f23e7a13e77b2b8d26" } },
+      { "name": "bait", "_id": { "$oid": "6a3fc916ee6a9486000f4fa8" } }
+    ],
+    "location": { "name": "Changi", "_id": { "$oid": "507f1f77bcf86cd799439013" } },
+    "instructions": [
+      "Wear comfortable clothes that can get wet.",
+      "Bring a change of clothes and a towel.",
+      "Listen to the guide's instructions before launching."
+    ]
+  },
+  {
+    "name": "Jurong Lake Walk",
+    "description": "A peaceful evening walk around Jurong Lake. Perfect for nature lovers and photographers.",
+    "conditions": [
+      { "name": "Sunset time" },
+      { "name": "Light breeze" }
+    ],
+    "tags": [
+      { "name": "popular", "_id": { "$oid": "6a3fc87c8e240e88906e44a9" } },
+      { "name": "spacious", "_id": { "$oid": "6a3fc8df12b9d49617491f9d" } },
+      { "name": "free", "_id": { "$oid": "6a3fc8f23e7a13e77b2b8d26" } }
+    ],
+    "location": { "name": "Jurong", "_id": { "$oid": "507f1f77bcf86cd799439011" } },
+    "instructions": [
+      "Bring a camera for stunning sunset shots.",
+      "Wear comfortable walking shoes.",
+      "Stay on designated paths."
+    ]
+  },
+  {
+    "name": "West Coast Seafood Feast",
+    "description": "A culinary adventure at West Coast's famous seafood restaurants. Sample fresh catches of the day.",
+    "conditions": [
+      { "name": "Empty stomach" },
+      { "name": "Group of 4+" }
+    ],
+    "tags": [
+      { "name": "quick", "_id": { "$oid": "6a3fc8936793bafe944055b8" } },
+      { "name": "pack", "_id": { "$oid": "6a3fc8ba769939bd1c3d097a" } },
+      { "name": "crowded", "_id": { "$oid": "6a3fc8cd441a2caa0c8f279a" } }
+    ],
+    "location": { "name": "West Coast", "_id": { "$oid": "507f1f77bcf86cd799439012" } },
+    "instructions": [
+      "Make a reservation at least 2 days in advance.",
+      "Ask for the chef's daily specials.",
+      "Bring cash as some stalls may not accept cards."
     ]
   }
 ]
-
-
 

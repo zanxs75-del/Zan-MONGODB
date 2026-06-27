@@ -1,14 +1,14 @@
 [
   {
     "_id": {"$oid": "507f1f77bcf86cd799439011"},
-    "name": "Italian"
+    "name": "Jurong"
   },
   {
     "_id": {"$oid": "507f1f77bcf86cd799439012"},
-    "name": "Indian"
+    "name": "West Coast"
   },
   {
     "_id": {"$oid": "507f1f77bcf86cd799439013"},
-    "name": "Mexican"
+    "name": "Changi"
   }
 ]
