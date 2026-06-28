@@ -1,6 +1,6 @@
 [
   {
-    "name": "Sunset Fishing Trip",
+    "title": "Sunset Fishing Trip",
     "location": { "name": "Jurong", "_id": { "$oid": "507f1f77bcf86cd799439011" } },
     "conditions": [
       { "name": "Clear skies" },
@@ -13,20 +13,20 @@
       { "name": "quick", "_id": { "$oid": "6a3fc8936793bafe944055b8" } },
       { "name": "easy", "_id": { "$oid": "6a3fc8a65914cc748eb80540" } }
     ],
-    "description": [
-      "A relaxing fishing trip along the coast during sunset.",
-      "Suitable for beginners and families.",
-      "All fishing equipment is provided."
-    ],
-    "instructions": [
-      "Arrive at the dock 30 minutes early.",
-      "Bring your own fishing rod or rent one on site.",
-      "Follow the captain's safety briefing.",
-      "Wear non-slip shoes."
-    ]
+    "description": {
+      "point1": "A relaxing fishing trip along the coast during sunset.",
+      "point2": "Suitable for beginners and families.",
+      "point3": "All fishing equipment is provided."
+    },
+    "instructions": {
+      "step1": "Arrive at the dock 30 minutes early.",
+      "step2": "Bring your own fishing rod or rent one on site.",
+      "step3": "Follow the captain's safety briefing.",
+      "step4": "Wear non-slip shoes."
+    }
   },
   {
-    "name": "Weekend Beach Picnic",
+    "title": "Weekend Beach Picnic",
     "location": { "name": "West Coast", "_id": { "$oid": "507f1f77bcf86cd799439012" } },
     "conditions": [
       { "name": "Clear skies" },
@@ -39,20 +39,20 @@
       { "name": "crowded", "_id": { "$oid": "6a3fc8cd441a2caa0c8f279a" } },
       { "name": "toilets", "_id": { "$oid": "6a3fc906233b031a2905322a" } }
     ],
-    "description": [
-      "Enjoy a relaxing picnic at the popular West Coast beach area.",
-      "Bring your own food and enjoy the scenic view.",
-      "Ideal for groups and families."
-    ],
-    "instructions": [
-      "Reserve a picnic table in advance.",
-      "Bring sunscreen and insect repellent.",
-      "Dispose of trash in designated bins.",
-      "Stay hydrated throughout the day."
-    ]
+    "description": {
+      "point1": "Enjoy a relaxing picnic at the popular West Coast beach area.",
+      "point2": "Bring your own food and enjoy the scenic view.",
+      "point3": "Ideal for groups and families."
+    },
+    "instructions": {
+      "step1": "Reserve a picnic table in advance.",
+      "step2": "Bring sunscreen and insect repellent.",
+      "step3": "Dispose of trash in designated bins.",
+      "step4": "Stay hydrated throughout the day."
+    }
   },
   {
-    "name": "Changi Kayak Adventure",
+    "title": "Changi Kayak Adventure",
     "location": { "name": "Changi", "_id": { "$oid": "507f1f77bcf86cd799439013" } },
     "conditions": [
       { "name": "Clear skies" },
@@ -65,20 +65,20 @@
       { "name": "free", "_id": { "$oid": "6a3fc8f23e7a13e77b2b8d26" } },
       { "name": "bait", "_id": { "$oid": "6a3fc916ee6a9486000f4fa8" } }
     ],
-    "description": [
-      "Explore the mangroves and coastline of Changi by kayak.",
-      "Guided tour with all equipment provided.",
-      "Experience the rich biodiversity of the area."
-    ],
-    "instructions": [
-      "Wear comfortable clothes that can get wet.",
-      "Bring a change of clothes and a towel.",
-      "Listen to the guide's instructions before launching.",
-      "Apply waterproof sunscreen before departure."
-    ]
+    "description": {
+      "point1": "Explore the mangroves and coastline of Changi by kayak.",
+      "point2": "Guided tour with all equipment provided.",
+      "point3": "Experience the rich biodiversity of the area."
+    },
+    "instructions": {
+      "step1": "Wear comfortable clothes that can get wet.",
+      "step2": "Bring a change of clothes and a towel.",
+      "step3": "Listen to the guide's instructions before launching.",
+      "step4": "Apply waterproof sunscreen before departure."
+    }
   },
   {
-    "name": "Morning Beach Yoga",
+    "title": "Morning Beach Yoga",
     "location": { "name": "West Coast", "_id": { "$oid": "507f1f77bcf86cd799439012" } },
     "conditions": [
       { "name": "Clear skies" },
@@ -91,20 +91,20 @@
       { "name": "free", "_id": { "$oid": "6a3fc8f23e7a13e77b2b8d26" } },
       { "name": "spacious", "_id": { "$oid": "6a3fc8df12b9d49617491f9d" } }
     ],
-    "description": [
-      "Start your day with a rejuvenating yoga session on the beach.",
-      "Suitable for all skill levels.",
-      "Mats and refreshments provided."
-    ],
-    "instructions": [
-      "Arrive 15 minutes early to set up your mat.",
-      "Wear comfortable workout attire.",
-      "Bring a water bottle and towel.",
-      "Inform the instructor of any injuries."
-    ]
+    "description": {
+      "point1": "Start your day with a rejuvenating yoga session on the beach.",
+      "point2": "Suitable for all skill levels.",
+      "point3": "Mats and refreshments provided."
+    },
+    "instructions": {
+      "step1": "Arrive 15 minutes early to set up your mat.",
+      "step2": "Wear comfortable workout attire.",
+      "step3": "Bring a water bottle and towel.",
+      "step4": "Inform the instructor of any injuries."
+    }
   },
   {
-    "name": "Coastal Photography Tour",
+    "title": "Coastal Photography Tour",
     "location": { "name": "Changi", "_id": { "$oid": "507f1f77bcf86cd799439013" } },
     "conditions": [
       { "name": "Clear skies" },
@@ -117,16 +117,16 @@
       { "name": "quick", "_id": { "$oid": "6a3fc8936793bafe944055b8" } },
       { "name": "easy", "_id": { "$oid": "6a3fc8a65914cc748eb80540" } }
     ],
-    "description": [
-      "Capture stunning coastal landscapes and wildlife.",
-      "Professional photography tips provided.",
-      "Suitable for amateur and experienced photographers."
-    ],
-    "instructions": [
-      "Bring your camera and extra batteries.",
-      "Wear comfortable walking shoes.",
-      "Meet at the Changi Point Ferry Terminal.",
-      "Carry a tripod for sunrise shots."
-    ]
+    "description": {
+      "point1": "Capture stunning coastal landscapes and wildlife.",
+      "point2": "Professional photography tips provided.",
+      "point3": "Suitable for amateur and experienced photographers."
+    },
+    "instructions": {
+      "step1": "Bring your camera and extra batteries.",
+      "step2": "Wear comfortable walking shoes.",
+      "step3": "Meet at the Changi Point Ferry Terminal.",
+      "step4": "Carry a tripod for sunrise shots."
+    }
   }
 ]
