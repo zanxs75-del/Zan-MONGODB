@@ -4,10 +4,16 @@ const cors = require("cors");
 const {connect} = require('../db');
 const mongoUri = process.env.MONGO_URI;
 
+
+
+
 // 1. create the express application
 const app = express();
 // 2. use the JSON middleware so that we can recieve JSON requests
 app.use(express.json());
+
+
+
 
 //Search for tabulate
 //req.query can contain following parameters:
@@ -58,29 +64,55 @@ async function main() {
 
 
     app.post("/api/tabulate", async function(req, res) {
-        const newTabulate = req.body; // Fixed: Changed comma to semicolon
+    try {
+        const newTabulate = req.body;
+
+        // Validate required fields
+        if (!newTabulate.location || !newTabulate.location.name) {
+            return res.status(400).json({ 
+                error: "Location name is required" 
+            });
+        }
+
+        if (!newTabulate.tags || !Array.isArray(newTabulate.tags)) {
+            return res.status(400).json({ 
+                error: "Tags array is required" 
+            });
+        }
 
         const location = await db.collection("location").findOne({
-          name: newTabulate.location.name // Extract the string from the object
-    });
+            name: newTabulate.location.name
+        });
+
+        if (!location) {
+            return res.status(404).json({ 
+                error: "Location not found" 
+            });
+        }
 
         const tags = await db.collection("tags").find({
-          name: {
-        $in: req.body.tags.map(t => t.name) // Extract an array of strings from the objects
-     }
-    }).toArray();
+            name: { $in: req.body.tags }
+        }).toArray();
 
-        // replace the newTabulate location and tags with the ones from the database
+        // Replace location and tags
         newTabulate.location = location;
         newTabulate.tags = tags;
 
         const respond = await db.collection("tabulate").insertOne(newTabulate);
-        res.json({
+        
+        res.status(201).json({
             message: "Successfully created tabulate",
             tabulateId: respond.insertedId
         });
-    }); // Fixed: Added closing braces for the route handler
-} // Fixed: Added closing brace for the main function
+    } catch (error) {
+        console.error("Error creating tabulate:", error);
+        res.status(500).json({ 
+            error: "Internal server error", 
+            details: error.message 
+        });
+    }
+}); 
+} 
 
 main();
 
