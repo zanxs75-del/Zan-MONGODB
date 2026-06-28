@@ -18,6 +18,45 @@ async function main() {
 
     // routes will be here
 
+        app.get("/api/tabulate", async function(req, res) {
+        const criteria = {};
+
+        if (req.query.name) {
+            criteria.name = {
+                $regex: req.query.name,
+                $options: "i" 
+            };
+        }
+
+        if (req.query.tags) {
+            const wantedTags = req.query.tags.split(",");
+            criteria['tags.name'] = {
+                "$in": wantedTags
+            };
+        }
+
+        // Expecting req.query.conditions to be a comma-delimited string
+        if (req.query.conditions) {
+            const conditionsArray = req.query.conditions.split(",");
+            const regexArray = [];
+
+            for (let conditions of conditionsArray) {
+                
+                regexArray.push(new RegExp(conditions.trim(), "i")); 
+            }
+
+            criteria["conditions.name"] = {
+                $in: regexArray
+            };
+        }
+
+        const tabulate = await db.collection("tabulate").find(criteria).toArray();
+        res.json({
+            tabulate: tabulate
+        });
+    });
+
+
     app.post("/api/tabulate", async function(req, res) {
         const newTabulate = req.body; // Fixed: Changed comma to semicolon
 
