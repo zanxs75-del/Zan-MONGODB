@@ -67,6 +67,26 @@ async function main() {
         })
     })
 
+    app.post("/api/places", async function(req,res){
+        const newPlaces = req.body;
+
+        const places = await db.collection("places").findOne({
+            name: newPlaces.leisure
+        })
+
+        const tags = await db.collection("tags").find({
+            name: {
+                $in: [req.body.tags]
+            }
+        })
+
+        newPlaces.leisure = leisure;
+
+        const respond = await db.collection("leisure").insertOne({
+            
+        })
+    })
+
 
 
 
