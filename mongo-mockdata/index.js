@@ -4,7 +4,7 @@ const {connect} = require('./db');
 const mongoUri = process.env.MONGO_URI;
 const cors = require("cors");
 const { ObjectId } = require('mongodb');
-const dbName = "8109_leisure";
+const dbName = "zan_leisure";
 
 // 1. Create the express application
 const app = express();

@@ -1,175 +1,65 @@
 [
   {
-    "title": "Evening Fishing at Jurong",
-    "places": {
-      "id": { "$oid": "507f1f77bcf86cd799439011" },
-      "name": "Jurong"
-    },
-    "conditions":{
-    "weather": "Clear skies or light clouds",
-    "visibility": "Good visibility",
-    "temperature": "Temperature between 25-30°C"
-    },
-
-    "tags": [
-      {
-        "id": { "$oid": "6a3fc87c8e240e88906e44a9" },
-        "name": "popular"
-      },
-      {
-        "id": { "$oid": "6a3fc916ee6a9486000f4fa8" },
-        "name": "bait"
-      },
-      {
-        "id": { "$oid": "6a3fc8cd441a2caa0c8f279a" },
-        "name": "crowded"
-      }
-    ],
-    "instructions": [
-      "Arrive at Jurong fishing spot by 6:00 AM",
-      "Set up fishing rods and bait",
-      "Cast lines and wait for bites",
-      "Pack up by 10:00 AM before the heat sets in"
-    ]
+  "title": "Sunset Kayaking at Changi",
+  "places": {
+    "name": "Changi"
+  },
+  "conditions": {
+    "weather": "Clear skies with calm sea",
+    "visibility": "Excellent visibility",
+    "temperature": "Temperature between 27-30°C"
+  },
+  "tags": ["popular", "family-friendly", "scenic"],
+  "instructions": [
+    "Arrive at Changi Beach by 5:00 PM",
+    "Collect kayaking equipment from the rental shop",
+    "Attend safety briefing and paddling instructions",
+    "Launch kayaks and paddle along the coastline",
+    "Watch the sunset from the water",
+    "Return to shore by 7:30 PM"
+  ]
   },
   {
-    "title": "West Coast Beach Picnic",
-    "places": {
-      "id": { "$oid": "507f1f77bcf86cd799439012" },
-      "name": "West Coast"
-    },
-    "conditions":{
-    "weather": "Clear skies or light clouds",
+  "title": "East Coast Park BBQ Night",
+  "places": {
+    "name": "East Coast"
+  },
+  "conditions": {
+    "weather": "Clear skies with light breeze",
     "visibility": "Good visibility",
-    "temperature": "Temperature between 25-30°C"
-    },
+    "temperature": "Temperature between 26-29°C"
+  },
+  "tags": ["quick", "pack", "crowded", "toilets"],
+  "instructions": [
+    "Reserve BBQ pit at East Coast Park online",
+    "Buy charcoal, food, and drinks from nearby supermarket",
+    "Arrive at the BBQ pit by 6:00 PM",
+    "Start the fire and begin grilling",
+    "Enjoy BBQ dinner with friends and family",
+    "Clean up the pit and dispose of trash",
+    "Leave by 10:00 PM"
+  ]
 
-    "tags": [
-      {
-        "id": { "$oid": "6a3fc8936793bafe944055b8" },
-        "name": "quick"
-      },
-      {
-        "id": { "$oid": "6a3fc8a65914cc748eb80540" },
-        "name": "easy"
-      },
-      {
-        "id": { "$oid": "6a3fc8ba769939bd1c3d097a" },
-        "name": "pack"
-      },
-      {
-        "id": { "$oid": "6a3fc8f23e7a13e77b2b8d26" },
-        "name": "free"
-      }
-    ],
-    "instructions": [
-      "Pack picnic basket with sandwiches and drinks",
-      "Bring a large mat and beach umbrella",
-      "Arrive at West Coast Park by 9:00 AM",
-      "Find a shady spot near the beach",
-      "Enjoy the picnic and beach walk until noon"
-    ]
   },
   {
-    "title": "Changi Boardwalk Stroll",
-    "places": {
-      "id": { "$oid": "507f1f77bcf86cd799439013" },
-      "name": "Changi"
-    },
-    "conditions": {
-    "weather": "Clear skies or light clouds",
-    "visibility": "Good visibility",
-    "temperature": "Temperature between 25-30°C"
-    },
-
-    "tags": [
-      {
-        "id": { "$oid": "6a3fc87c8e240e88906e44a9" },
-        "name": "popular"
-      },
-      {
-        "id": { "$oid": "6a3fc8df12b9d49617491f9d" },
-        "name": "spacious"
-      },
-      {
-        "id": { "$oid": "6a3fc906233b031a2905322a" },
-        "name": "toilets"
-      }
-    ],
-    "instructions": [
-      "Start at Changi Village Hawker Centre",
-      "Walk along the boardwalk towards the beach",
-      "Stop at viewing points to watch planes land",
-      "Reach the end of the boardwalk by sunset",
-      "Return via the same route or take the coastal path"
-    ]
+  "title": "Sentosa Nature Walk",
+  "places": {
+    "name": "Sentosa"
   },
-  {
-    "title": "Jurong Lake Gardens Morning Walk",
-    "places": {
-      "id": { "$oid": "507f1f77bcf86cd799439011" },
-      "name": "Jurong"
-    },
-    "conditions": {
-    "weather": "Clear skies or light clouds",
-    "visibility": "Good visibility",
-    "temperature": "Temperature between 25-30°C"
-    },
-
-    "tags": [
-      {
-        "id": { "$oid": "6a3fc8a65914cc748eb80540" },
-        "name": "easy"
-      },
-      {
-        "id": { "$oid": "6a3fc8f23e7a13e77b2b8d26" },
-        "name": "free"
-      },
-      {
-        "id": { "$oid": "6a3fc8df12b9d49617491f9d" },
-        "name": "spacious"
-      }
-    ],
-    "instructions": [
-      "Enter Jurong Lake Gardens via the main entrance",
-      "Walk the lakeside promenade",
-      "Visit the Chinese and Japanese gardens",
-      "Stop at the water lily pond for photos",
-      "Exit through the western gate"
-    ]
+  "conditions": {
+    "weather": "Partly cloudy with light rain possible",
+    "visibility": "Moderate visibility",
+    "temperature": "Temperature between 25-28°C"
   },
-  {
-    "title": "West Coast Park Cycling",
-    "places": {
-      "id": { "$oid": "507f1f77bcf86cd799439012" },
-      "name": "West Coast"
-    },
-    "conditions": {
-    "weather": "Clear skies or light clouds",
-    "visibility": "Good visibility",
-    "temperature": "Temperature between 25-30°C"
-    },
-    
-    "tags": [
-      {
-        "id": { "$oid": "6a3fc8936793bafe944055b8" },
-        "name": "quick"
-      },
-      {
-        "id": { "$oid": "6a3fc8ba769939bd1c3d097a" },
-        "name": "pack"
-      },
-      {
-        "id": { "$oid": "6a3fc906233b031a2905322a" },
-        "name": "toilets"
-      }
-    ],
-    "instructions": [
-      "Rent a bicycle from the park entrance",
-      "Cycle along the coastal cycling path",
-      "Stop at the playground for a break",
-      "Continue to the end of the park and back",
-      "Return the bicycle within 2 hours"
-    ]
-  }
+  "tags": ["easy", "free", "spacious", "scenic"],
+  "instructions": [
+    "Take Sentosa Express to Imbiah Station",
+    "Start at the Sentosa Nature Discovery Centre",
+    "Walk the forest trail through the secondary forest",
+    "Visit the butterfly sanctuary",
+    "Stop at the viewing deck for panoramic views",
+    "Descend to the beach via the coastal trail",
+    "Complete the walk by 6:00 PM"
+  ]
+}
 ]
