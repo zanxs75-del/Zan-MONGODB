@@ -1,0 +1,180 @@
+[
+  {
+    "name": "Evening Fishing at Jurong",
+    "places": [
+      {
+        "id": { "$oid": "507f1f77bcf86cd799439011" },
+        "name": "Jurong"
+      }
+    ],
+    "conditions": [
+      { "name": "Tide level below 1.2m" },
+      { "name": "Wind speed under 15km/h" },
+      { "name": "No rain forecast" }
+    ],
+    "tags": [
+      {
+        "id": { "$oid": "6a3fc87c8e240e88906e44a9" },
+        "name": "popular"
+      },
+      {
+        "id": { "$oid": "6a3fc916ee6a9486000f4fa8" },
+        "name": "bait"
+      },
+      {
+        "id": { "$oid": "6a3fc8cd441a2caa0c8f279a" },
+        "name": "crowded"
+      }
+    ],
+    "instructions": [
+      "Arrive at Jurong fishing spot by 6:00 AM",
+      "Set up fishing rods and bait",
+      "Cast lines and wait for bites",
+      "Pack up by 10:00 AM before the heat sets in"
+    ]
+  },
+  {
+    "name": "West Coast Beach Picnic",
+    "places": [
+      {
+        "id": { "$oid": "507f1f77bcf86cd799439012" },
+        "name": "West Coast"
+      }
+    ],
+    "conditions": [
+      { "name": "Clear skies or light clouds" },
+      { "name": "Temperature between 25-30°C" },
+      { "name": "Low tide for beach walking" }
+    ],
+    "tags": [
+      {
+        "id": { "$oid": "6a3fc8936793bafe944055b8" },
+        "name": "quick"
+      },
+      {
+        "id": { "$oid": "6a3fc8a65914cc748eb80540" },
+        "name": "easy"
+      },
+      {
+        "id": { "$oid": "6a3fc8ba769939bd1c3d097a" },
+        "name": "pack"
+      },
+      {
+        "id": { "$oid": "6a3fc8f23e7a13e77b2b8d26" },
+        "name": "free"
+      }
+    ],
+    "instructions": [
+      "Pack picnic basket with sandwiches and drinks",
+      "Bring a large mat and beach umbrella",
+      "Arrive at West Coast Park by 9:00 AM",
+      "Find a shady spot near the beach",
+      "Enjoy the picnic and beach walk until noon"
+    ]
+  },
+  {
+    "name": "Changi Boardwalk Stroll",
+    "places": [
+      {
+        "id": { "$oid": "507f1f77bcf86cd799439013" },
+        "name": "Changi"
+      }
+    ],
+    "conditions": [
+      { "name": "Sunset time between 6:30-7:30 PM" },
+      { "name": "Dry weather" },
+      { "name": "Good visibility" }
+    ],
+    "tags": [
+      {
+        "id": { "$oid": "6a3fc87c8e240e88906e44a9" },
+        "name": "popular"
+      },
+      {
+        "id": { "$oid": "6a3fc8df12b9d49617491f9d" },
+        "name": "spacious"
+      },
+      {
+        "id": { "$oid": "6a3fc906233b031a2905322a" },
+        "name": "toilets"
+      }
+    ],
+    "instructions": [
+      "Start at Changi Village Hawker Centre",
+      "Walk along the boardwalk towards the beach",
+      "Stop at viewing points to watch planes land",
+      "Reach the end of the boardwalk by sunset",
+      "Return via the same route or take the coastal path"
+    ]
+  },
+  {
+    "name": "Jurong Lake Gardens Morning Walk",
+    "places": [
+      {
+        "id": { "$oid": "507f1f77bcf86cd799439011" },
+        "name": "Jurong"
+      }
+    ],
+    "conditions": [
+      { "name": "Morning temperature below 28°C" },
+      { "name": "No heavy rain" },
+      { "name": "Low humidity" }
+    ],
+    "tags": [
+      {
+        "id": { "$oid": "6a3fc8a65914cc748eb80540" },
+        "name": "easy"
+      },
+      {
+        "id": { "$oid": "6a3fc8f23e7a13e77b2b8d26" },
+        "name": "free"
+      },
+      {
+        "id": { "$oid": "6a3fc8df12b9d49617491f9d" },
+        "name": "spacious"
+      }
+    ],
+    "instructions": [
+      "Enter Jurong Lake Gardens via the main entrance",
+      "Walk the lakeside promenade",
+      "Visit the Chinese and Japanese gardens",
+      "Stop at the water lily pond for photos",
+      "Exit through the western gate"
+    ]
+  },
+  {
+    "name": "West Coast Park Cycling",
+    "places": [
+      {
+        "id": { "$oid": "507f1f77bcf86cd799439012" },
+        "name": "West Coast"
+      }
+    ],
+    "conditions": [
+      { "name": "Wind speed under 20km/h" },
+      { "name": "Daylight hours only" },
+      { "name": "No thunderstorm warnings" }
+    ],
+    "tags": [
+      {
+        "id": { "$oid": "6a3fc8936793bafe944055b8" },
+        "name": "quick"
+      },
+      {
+        "id": { "$oid": "6a3fc8ba769939bd1c3d097a" },
+        "name": "pack"
+      },
+      {
+        "id": { "$oid": "6a3fc906233b031a2905322a" },
+        "name": "toilets"
+      }
+    ],
+    "instructions": [
+      "Rent a bicycle from the park entrance",
+      "Cycle along the coastal cycling path",
+      "Stop at the playground for a break",
+      "Continue to the end of the park and back",
+      "Return the bicycle within 2 hours"
+    ]
+  }
+]
