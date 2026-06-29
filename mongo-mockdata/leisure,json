@@ -5,11 +5,12 @@
       "id": { "$oid": "507f1f77bcf86cd799439011" },
       "name": "Jurong"
     },
-    "conditions": [
-      { "weather": "Tide level below 1.2m" },
-      { "visibility": "Wind speed under 15km/h" },
-      { "temperature": "No rain forecast" }
-    ],
+    "conditions":{
+    "weather": "Clear skies or light clouds",
+    "visibility": "Good visibility",
+    "temperature": "Temperature between 25-30°C"
+    },
+
     "tags": [
       {
         "id": { "$oid": "6a3fc87c8e240e88906e44a9" },
@@ -37,11 +38,12 @@
       "id": { "$oid": "507f1f77bcf86cd799439012" },
       "name": "West Coast"
     },
-    "conditions": [
-      { "weather": "Clear skies or light clouds" },
-      { "visibility": "Low tide for beach walking" },
-      { "temperature": "Temperature between 25-30°C" }
-    ],
+    "conditions":{
+    "weather": "Clear skies or light clouds",
+    "visibility": "Good visibility",
+    "temperature": "Temperature between 25-30°C"
+    },
+
     "tags": [
       {
         "id": { "$oid": "6a3fc8936793bafe944055b8" },
@@ -74,11 +76,12 @@
       "id": { "$oid": "507f1f77bcf86cd799439013" },
       "name": "Changi"
     },
-    "conditions": [
-      { "weather": "Dry weather" },
-      { "visibility": "Good visibility" },
-      { "temperature": "Sunset time between 6:30-7:30 PM" }
-    ],
+    "conditions": {
+    "weather": "Clear skies or light clouds",
+    "visibility": "Good visibility",
+    "temperature": "Temperature between 25-30°C"
+    },
+
     "tags": [
       {
         "id": { "$oid": "6a3fc87c8e240e88906e44a9" },
@@ -107,11 +110,12 @@
       "id": { "$oid": "507f1f77bcf86cd799439011" },
       "name": "Jurong"
     },
-    "conditions": [
-      { "weather": "No heavy rain" },
-      { "visibility": "Low humidity" },
-      { "temperature": "Morning temperature below 28°C" }
-    ],
+    "conditions": {
+    "weather": "Clear skies or light clouds",
+    "visibility": "Good visibility",
+    "temperature": "Temperature between 25-30°C"
+    },
+
     "tags": [
       {
         "id": { "$oid": "6a3fc8a65914cc748eb80540" },
@@ -140,11 +144,12 @@
       "id": { "$oid": "507f1f77bcf86cd799439012" },
       "name": "West Coast"
     },
-    "conditions": [
-      { "weather": "No thunderstorm warnings" },
-      { "visibility": "Daylight hours only" },
-      { "temperature": "Wind speed under 20km/h" }
-    ],
+    "conditions": {
+    "weather": "Clear skies or light clouds",
+    "visibility": "Good visibility",
+    "temperature": "Temperature between 25-30°C"
+    },
+    
     "tags": [
       {
         "id": { "$oid": "6a3fc8936793bafe944055b8" },

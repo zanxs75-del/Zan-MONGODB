@@ -44,19 +44,23 @@ async function main() {
             }
         }
 
-        //we will expect req.quiry.conditions to be a coma delimited strings
+        
         
         if (req.query.conditions) {
-            const conditionsArray = req.query.conditions.split(",")
-            const regexArray = [];
+            const conditionsArray = req.query.conditions.split(",");
+            const orConditions = [];
 
-            for (let conditions of conditionsArray) {
-                regexArray.push(new RegexExp(conditions, "i"));
-            }
-            criteria["conditions.weather/visibility/temperature"] = {
-                $in: regexArray
-            }
+        for (let condition of conditionsArray) {
+        const regex = new RegExp(condition.trim(), "i");
+        orConditions.push(
+            { "conditions.weather": { $regex: regex } },
+            { "conditions.visibility": { $regex: regex } },
+            { "conditions.temperature": { $regex: regex } }
+            );
         }
+
+    criteria["$or"] = orConditions;
+}
         const leisure = await db.collection("leisure").find(criteria).toArray();
         res.json({
             leisure: leisure
