@@ -22,9 +22,42 @@ async function main() {
    
     const db = await connect(process.env.MONGO_URI, "8109_leisure");
 
-    app.get('/leisure', async function (req, res) {
+    //Search for leisure
+    //the req.query can contain the following parameters:
+    //name: string pattern for name
+    app.get('/api/leisure', async function (req, res) {
 
-        const leisure = await db.collection("leisure").find({}).toArray();
+
+        const criteria = {};
+
+        if (req.query.name) {
+            criteria.name = {
+                $regex: req.query.name,
+                $options:"i"
+            }
+        }
+
+        if (req.query.tags) {
+            const wantedTags = req.query.tags.split(",")
+            criteria['tags.name'] = {
+                "$in": wantedTags
+            }
+        }
+
+        //we will expect req.quiry.conditions to be a coma delimited strings
+        
+        if (req.query.conditions) {
+            const conditionsArray = req.query.conditions.split(",")
+            const regexArray = [];
+
+            for (let conditions of conditionsArray) {
+                regexArray.push(new RegexExp(conditions, "i"));
+            }
+            criteria["conditions.weather/visibility/temperature"] = {
+                $in: regexArray
+            }
+        }
+        const leisure = await db.collection("leisure").find(criteria).toArray();
         res.json({
             leisure: leisure
         })

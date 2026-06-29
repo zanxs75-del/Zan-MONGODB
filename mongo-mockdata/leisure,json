@@ -1,16 +1,14 @@
 [
   {
-    "name": "Evening Fishing at Jurong",
-    "places": [
-      {
-        "id": { "$oid": "507f1f77bcf86cd799439011" },
-        "name": "Jurong"
-      }
-    ],
+    "title": "Evening Fishing at Jurong",
+    "places": {
+      "id": { "$oid": "507f1f77bcf86cd799439011" },
+      "name": "Jurong"
+    },
     "conditions": [
-      { "name": "Tide level below 1.2m" },
-      { "name": "Wind speed under 15km/h" },
-      { "name": "No rain forecast" }
+      { "weather": "Tide level below 1.2m" },
+      { "visibility": "Wind speed under 15km/h" },
+      { "temperature": "No rain forecast" }
     ],
     "tags": [
       {
@@ -34,17 +32,15 @@
     ]
   },
   {
-    "name": "West Coast Beach Picnic",
-    "places": [
-      {
-        "id": { "$oid": "507f1f77bcf86cd799439012" },
-        "name": "West Coast"
-      }
-    ],
+    "title": "West Coast Beach Picnic",
+    "places": {
+      "id": { "$oid": "507f1f77bcf86cd799439012" },
+      "name": "West Coast"
+    },
     "conditions": [
-      { "name": "Clear skies or light clouds" },
-      { "name": "Temperature between 25-30°C" },
-      { "name": "Low tide for beach walking" }
+      { "weather": "Clear skies or light clouds" },
+      { "visibility": "Low tide for beach walking" },
+      { "temperature": "Temperature between 25-30°C" }
     ],
     "tags": [
       {
@@ -73,17 +69,15 @@
     ]
   },
   {
-    "name": "Changi Boardwalk Stroll",
-    "places": [
-      {
-        "id": { "$oid": "507f1f77bcf86cd799439013" },
-        "name": "Changi"
-      }
-    ],
+    "title": "Changi Boardwalk Stroll",
+    "places": {
+      "id": { "$oid": "507f1f77bcf86cd799439013" },
+      "name": "Changi"
+    },
     "conditions": [
-      { "name": "Sunset time between 6:30-7:30 PM" },
-      { "name": "Dry weather" },
-      { "name": "Good visibility" }
+      { "weather": "Dry weather" },
+      { "visibility": "Good visibility" },
+      { "temperature": "Sunset time between 6:30-7:30 PM" }
     ],
     "tags": [
       {
@@ -108,17 +102,15 @@
     ]
   },
   {
-    "name": "Jurong Lake Gardens Morning Walk",
-    "places": [
-      {
-        "id": { "$oid": "507f1f77bcf86cd799439011" },
-        "name": "Jurong"
-      }
-    ],
+    "title": "Jurong Lake Gardens Morning Walk",
+    "places": {
+      "id": { "$oid": "507f1f77bcf86cd799439011" },
+      "name": "Jurong"
+    },
     "conditions": [
-      { "name": "Morning temperature below 28°C" },
-      { "name": "No heavy rain" },
-      { "name": "Low humidity" }
+      { "weather": "No heavy rain" },
+      { "visibility": "Low humidity" },
+      { "temperature": "Morning temperature below 28°C" }
     ],
     "tags": [
       {
@@ -143,17 +135,15 @@
     ]
   },
   {
-    "name": "West Coast Park Cycling",
-    "places": [
-      {
-        "id": { "$oid": "507f1f77bcf86cd799439012" },
-        "name": "West Coast"
-      }
-    ],
+    "title": "West Coast Park Cycling",
+    "places": {
+      "id": { "$oid": "507f1f77bcf86cd799439012" },
+      "name": "West Coast"
+    },
     "conditions": [
-      { "name": "Wind speed under 20km/h" },
-      { "name": "Daylight hours only" },
-      { "name": "No thunderstorm warnings" }
+      { "weather": "No thunderstorm warnings" },
+      { "visibility": "Daylight hours only" },
+      { "temperature": "Wind speed under 20km/h" }
     ],
     "tags": [
       {
