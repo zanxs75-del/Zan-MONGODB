@@ -6,6 +6,18 @@ const cors = require("cors");
 const { ObjectId } = require('mongodb');
 const dbName = "zan_leisure";
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+
+
+// ===== JWT FUNCTION =====
+function generateAccessToken(id) {
+    return jwt.sign({
+        "user_id": id,
+        "role": "user"
+    }, process.env.SECRET_TOKEN, {
+        "expiresIn": "3w"
+    });
+}
 
 
 // 1. Create the express application
@@ -239,16 +251,116 @@ async function main() {
             }
         });
 
-        // Register a new user
-        // shape of req.body:
-        // {
-        //   email: string,
-        //   password: string
-        // }
-        // Add this after your other routes
+        
+
+// Register a new user       
+// Add this after your other routes
+        app.post('/api/users', async function(req, res) {  
+    try {  // ← Added try/catch
+        const { email, password } = req.body;
+
+        // Validate required fields
+        if (!email) {
+            return res.status(400).json({ error: "Email is required" });
+        }
+        if (!password) {
+            return res.status(400).json({ error: "Password is required" });
+        }
+
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            return res.status(400).json({ error: "Invalid email format" });
+        }
+
+        // Validate password strength (at least 6 characters)
+        if (password.length < 6) {
+            return res.status(400).json({ error: "Password must be at least 6 characters" });
+        }
+
+        // Check if user already exists
+        const existingUser = await db.collection("users").findOne({
+            email: email
+        });
+
+        if (existingUser) {
+            return res.status(409).json({ error: "User already exists" });
+        }
+
+        // Hash password and insert user
+        const hashedPassword = await bcrypt.hash(password, 12);
+        
+        const result = await db.collection("users").insertOne({  
+            email: email,
+            password: hashedPassword,
+            createdAt: new Date()
+        });
+
+        res.status(201).json({  
+            message: "New user has been created", 
+            userId: result.insertedId
+        });
+
+    } catch (error) {  // ← Added catch
+        console.error("Error creating user:", error);
+        res.status(500).json({ error: error.message });
+    }
+});  
+
+// USER LOGIN 
+
+app.post('/api/login', async function(req, res) {  // ← Added {
+    try {  // ← Added try/catch
+        const email = req.body.email;  // ← Fixed: using =
+        const password = req.body.password;  // ← Fixed: using =
+
+// Validate required fields
+        if (!email) {
+        return res.status(400).json({ error: "Email is required" });
+        }
+        if (!password) {
+        return res.status(400).json({ error: "Password is required" });
+        }
+
+// Find the user by email
+        const user = await db.collection("users").findOne({  // ← Fixed: lowercase c
+            email: email
+        });
+
+        if (user) {
+// Check if the password matches
+            if (await bcrypt.compare(password, user.password)) {  // ← Fixed: added )
+                const token = generateAccessToken(user._id);
+                res.json({
+                     token: token,
+                    message: "Login is successful",
+                    user: {
+                        id: user._id,
+                        email: user.email
+                    }
+            });
+            } else {
+                 res.status(401).json({
+                    message: "Wrong email or password"
+                });
+            }
+            } else {
+                res.status(401).json({
+                     message: "Wrong email or password"
+                });
+            }
+            } catch (error) {
+                console.error("Error during login:", error);
+                res.status(500).json({ error: error.message });
+            }
+        }); 
 
 
 
+
+
+
+    
 
 
 
@@ -257,12 +369,15 @@ async function main() {
         process.exit(1);
     }
 
+app.listen(3000, function () {
+    console.log("Server has started");
+})
+
+
+
 }
 
 // Start the application
 main();
 
-app.listen(3000, function () {
-    console.log("Server has started");
-})
-    
+
