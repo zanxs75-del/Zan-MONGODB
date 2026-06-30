@@ -19,6 +19,39 @@ function generateAccessToken(id) {
     });
 }
 
+// ===== VERIFY TOKEN MIDDLEWARE =====
+function verifyToken(req, res, next) {  
+    // Extract out the token from the Authorization header
+    const authHeader = req.headers['authorization'];
+    
+    if (authHeader) {
+        const token = authHeader.split(" ")[1];  
+        
+        if (token) {
+            // Verify the token's claims and expiry matches the signature
+            jwt.verify(token, process.env.SECRET_TOKEN, function(err, claims) {
+                if (err) {
+                    return res.status(401).json({  
+                        "message": "Token invalid or expired"
+                    });
+                } else {
+                    // Save in the request the logged in user's information
+                    req.user = claims;
+                    next();
+                }
+            });
+        } else {
+            return res.status(401).json({  
+                "message": "No token provided"
+            });
+        }
+    } else {
+        return res.status(401).json({  
+            "message": "Authorization header not found"
+        });
+    }
+}
+
 
 // 1. Create the express application
 const app = express();
@@ -253,8 +286,7 @@ async function main() {
 
         
 
-// Register a new user       
-// Add this after your other routes
+// Register a new user //  Add this after your other routes      
         app.post('/api/users', async function(req, res) {  
     try {  // ← Added try/catch
         const { email, password } = req.body;
@@ -308,11 +340,10 @@ async function main() {
 });  
 
 // USER LOGIN 
-
-app.post('/api/login', async function(req, res) {  // ← Added {
+app.post('/api/login', async function(req, res) {  
     try {  // ← Added try/catch
-        const email = req.body.email;  // ← Fixed: using =
-        const password = req.body.password;  // ← Fixed: using =
+        const email = req.body.email;  
+        const password = req.body.password;  
 
 // Validate required fields
         if (!email) {
@@ -323,13 +354,13 @@ app.post('/api/login', async function(req, res) {  // ← Added {
         }
 
 // Find the user by email
-        const user = await db.collection("users").findOne({  // ← Fixed: lowercase c
+        const user = await db.collection("users").findOne({  
             email: email
         });
 
         if (user) {
 // Check if the password matches
-            if (await bcrypt.compare(password, user.password)) {  // ← Fixed: added )
+            if (await bcrypt.compare(password, user.password)) {  
                 const token = generateAccessToken(user._id);
                 res.json({
                      token: token,
@@ -353,14 +384,32 @@ app.post('/api/login', async function(req, res) {  // ← Added {
                 console.error("Error during login:", error);
                 res.status(500).json({ error: error.message });
             }
-        }); 
+        });
+        
 
+// ===== GET CURRENT USER (PROTECTED ROUTE) =====
+app.get('/api/me', verifyToken, async function(req, res) {  
+    try {  
+        const user = await db.collection("users").findOne({  
+            _id: new ObjectId(req.user.user_id)
+        });
 
+        if (!user) {
+            return res.status(404).json({ error: "User not found" });
+        }
 
+        // Remove password before sending response
+        delete user.password;  
 
+        res.json({  
+            user: user
+        });
+    } catch (error) {
+        console.error("Error fetching user:", error);
+        res.status(500).json({ error: error.message });
+            }
+});
 
-
-    
 
 
 
