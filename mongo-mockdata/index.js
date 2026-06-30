@@ -5,6 +5,7 @@ const mongoUri = process.env.MONGO_URI;
 const cors = require("cors");
 const { ObjectId } = require('mongodb');
 const dbName = "zan_leisure";
+const bcrypt = require('bcrypt');
 
 // 1. Create the express application
 const app = express();
@@ -23,7 +24,7 @@ app.get('/health', function (req, res) {
 // 4. Main function to connect to database and setup routes
 async function main() {
     try {
-        const db = await connect(process.env.MONGO_URI, "8109_leisure");
+        const db = await connect(process.env.MONGO_URI, dbName);
         console.log("Database connected successfully");
 
         // GET route - Search for leisure
@@ -237,17 +238,74 @@ async function main() {
             }
         });
 
-        // Start server AFTER database connection
-        app.listen(3000, function () {
-            console.log("Server has started on port 3000");
+        // Register a new user
+        // shape of req.body:
+        // {
+        //   email: string,
+        //   password: string
+        // }
+        // Add this after your other routes
+app.post('/api/leisure/user', async function(req, res) {
+    try {
+        const { email, password } = req.body;
+
+        // Validate required fields
+        if (!email) {
+            return res.status(400).json({ error: "Email is required" });
+        }
+        if (!password) {
+            return res.status(400).json({ error: "Password is required" });
+        }
+
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            return res.status(400).json({ error: "Invalid email format" });
+        }
+
+        // Check if user already exists
+        const existingUser = await db.collection("users").findOne({
+            email: email
         });
+
+        if (existingUser) {
+            return res.status(409).json({ error: "User already exists" });
+        }
+
+        // Hash password and insert user
+        const hashedPassword = await bcrypt.hash(password, 12);
+        
+        const result = await db.collection("users").insertOne({
+            email: email,
+            password: hashedPassword,
+            createdAt: new Date()
+        });
+
+        res.status(201).json({
+            message: "New user has been created",
+            userId: result.insertedId
+        });
+
+    } catch (error) {
+        console.error("Error creating user:", error);
+        res.status(500).json({ error: error.message });
+    }
+});
+
+
+
 
     } catch (error) {
         console.error("Database connection failed:", error);
         process.exit(1);
     }
+
 }
 
 // Start the application
 main();
+
+app.listen(3000, function () {
+    console.log("Server has started");
+})
     
